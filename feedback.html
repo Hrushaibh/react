@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feedback</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h2>Electronics Learning</h2>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="certificate.html">Certificate</a>
+  </nav>
+</header>
+
+<section class="hero hero--small">
+  <h1>Feedback</h1>
+  <p>Help us improve this electronics learning experience.</p>
+</section>
+
+<main class="container">
+
+  <section class="section">
+    <div class="card">
+      <h2>Send Your Feedback</h2>
+      <p class="helper-text">
+        Tell us what you liked, what confused you, and what topics you would like to see next.
+      </p>
+
+      <form>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Your Experience</label>
+          <textarea id="experience" name="experience" rows="6" placeholder="Share your thoughts here..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="module">Module you used most</label>
+          <select id="module" name="module">
+            <option value="">Select a module (optional)</option>
+            <option value="tv">Television Technology</option>
+            <option value="mobile">Mobile Architecture</option>
+            <option value="components">Electronic Components</option>
+            <option value="quiz">Quiz</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+Thank you for your feedback · <a href="#" data-cookie-settings>Cookie preferences</a>
+</footer>
+
+<script src="cookies.js"></script>
+</body>
+</html>

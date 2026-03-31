@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Course Registration</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h2>Electronics Learning</h2>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="quiz.html">Quiz</a>
+  </nav>
+</header>
+
+<section class="hero hero--small">
+  <h1>Register for Electronics Course</h1>
+  <p>Join the learning path and track your progress.</p>
+</section>
+
+<main class="container">
+
+  <section class="section">
+    <div class="card">
+      <h2>Student Registration</h2>
+      <p class="helper-text">
+        Fill in your details to be enrolled in the selected module. All fields marked with * are required.
+      </p>
+
+      <form id="registrationForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input id="fullName" name="fullName" type="text" placeholder="e.g. John Smith" required maxlength="80">
+            <small class="helper">Letters and spaces only, 2–80 characters</small>
+            <span class="form-error" id="fullNameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            <small class="helper">Valid email format</small>
+            <span class="form-error" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input id="phone" name="phone" type="tel" placeholder="e.g. +1 234-567-8900 or 0123456789" required>
+            <small class="helper">10–15 digits, optional + or dashes</small>
+            <span class="form-error" id="phoneError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="dob">Date of Birth *</label>
+            <input id="dob" name="dob" type="date" required>
+            <small class="helper">Must be 13+ years old</small>
+            <span class="form-error" id="dobError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="country">Country *</label>
+            <input id="country" name="country" type="text" placeholder="e.g. United States" required pattern="[A-Za-z\s\-']{2,60}">
+            <small class="helper">Letters and spaces, 2–60 characters</small>
+            <span class="form-error" id="countryError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="city">City *</label>
+            <input id="city" name="city" type="text" placeholder="Your city" required>
+            <small class="helper">Letters and spaces, 2–50 characters</small>
+            <span class="form-error" id="cityError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="postalCode">Postal / ZIP Code</label>
+            <input id="postalCode" name="postalCode" type="text" placeholder="e.g. 12345 or A1B 2C3">
+            <small class="helper">5–10 alphanumeric characters</small>
+            <span class="form-error" id="postalCodeError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="course">Select Course *</label>
+            <select id="course" name="course" required>
+              <option value="">Choose a course</option>
+              <option value="tv">Television Technology</option>
+              <option value="mobile">Mobile Architecture</option>
+              <option value="components">Electronic Components</option>
+            </select>
+            <span class="form-error" id="courseError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="education">Education Level *</label>
+            <select id="education" name="education" required>
+              <option value="">Select your level</option>
+              <option value="high-school">High School</option>
+              <option value="college">College / Undergraduate</option>
+              <option value="graduate">Graduate / Postgraduate</option>
+              <option value="professional">Professional / Self-taught</option>
+            </select>
+            <span class="form-error" id="educationError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="experience">Experience Level *</label>
+            <select id="experience" name="experience" required>
+              <option value="">Select experience</option>
+              <option value="beginner">Beginner (no prior knowledge)</option>
+              <option value="intermediate">Intermediate (basic electronics)</option>
+              <option value="advanced">Advanced (want to deepen knowledge)</option>
+            </select>
+            <span class="form-error" id="experienceError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="studyTime">Preferred Study Time</label>
+            <select id="studyTime" name="studyTime">
+              <option value="">Select preference</option>
+              <option value="morning">Morning (6am–12pm)</option>
+              <option value="afternoon">Afternoon (12pm–6pm)</option>
+              <option value="evening">Evening (6pm–10pm)</option>
+              <option value="weekend">Weekends only</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Street Address</label>
+          <input id="address" name="address" type="text" placeholder="Street, building, apartment">
+          <small class="helper">Optional – for shipping materials if needed</small>
+          <span class="form-error" id="addressError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="goals">Learning Goals (optional)</label>
+          <textarea id="goals" name="goals" rows="4" placeholder="What do you want to learn from this course? Any specific topics?"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input id="terms" name="terms" type="checkbox" required>
+            I agree to the <a href="#" class="link">Terms of Service</a> and <a href="#" class="link">Privacy Policy</a> *
+          </label>
+          <span class="form-error" id="termsError"></span>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input id="newsletter" name="newsletter" type="checkbox">
+            Send me course updates and newsletter (optional)
+          </label>
+        </div>
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+Electronics Learning · <a href="#" data-cookie-settings>Cookie preferences</a>
+</footer>
+
+<script src="register.js"></script>
+<script src="cookies.js"></script>
+</body>
+</html>
